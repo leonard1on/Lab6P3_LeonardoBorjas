@@ -196,9 +196,9 @@ int main(){
 			cin>>numero2;
 			
 			if(opcion==2){
-				valor=numeros.at(numero1).getNumero() + numeros.at(numero2).getNumero();
+				//valor=numeros.at(numero1).getNumero() + numeros.at(numero2).getNumero();
 				if(typeid(numeros.at(numero1))==typeid(Binario)) {
-
+					
 				}
 			}else if(opcion==3){
 

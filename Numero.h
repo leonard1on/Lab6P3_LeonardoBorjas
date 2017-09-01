@@ -5,7 +5,9 @@ using namespace std;
 class Numero{
 	private:
 		string numero;
-		public:
+	protected:
+		int valor;
+	public:
 		Numero();
 		Numero(string);
 		string getNumero();

@@ -8,6 +8,7 @@ Numero::Numero(){
 
 Numero::Numero(string pNumero){
 	numero=pNumero;
+	valor=stoi(pNumero);
 }
 
 string Numero::getNumero(){

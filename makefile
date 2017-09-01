@@ -5,7 +5,7 @@ Main.o: Main.cpp Numero.h Octal.h Hexadecimal.h Binario.h
 	g++ -c Main.cpp
 
 Numero.o: Numero.cpp Numero.h
-	g++ -c Numero.cpp
+	g++ -std=c++11 -c Numero.cpp
 
 Octal.o: Octal.cpp Octal.h Numero.h
 	g++ -c Octal.cpp
