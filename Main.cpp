@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <typeinfo>
 
 int menu();
 
@@ -184,12 +185,26 @@ int main(){
 		}//fin if
 	
 		if(opcion==2 || opcion==3 || opcion==4){
-			int numero1, numero2;
+			int numero1, numero2, valor;
+
 			for(int i=0;i<numeros.size();i++){
-				cout<<numeros.at(i).getNumero();
+				cout<<numeros.at(i).getNumero() <<endl;
 			}
 			cout<<"Elija un numero de la lista: ";
 			cin>>numero1;
+			cout<<"Elija el segundo numero de la lista: ";
+			cin>>numero2;
+			
+			if(opcion==2){
+				valor=numeros.at(numero1).getNumero() + numeros.at(numero2).getNumero();
+				if(typeid(numeros.at(numero1))==typeid(Binario)) {
+
+				}
+			}else if(opcion==3){
+
+			}else{
+
+			}
 			
 		}
 	}while(opcion!=5);
