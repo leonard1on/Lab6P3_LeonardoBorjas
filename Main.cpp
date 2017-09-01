@@ -5,12 +5,13 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include
+#include <vector>
 
 int menu();
 
 using namespace std;
 int main(){
+	vector<Numero> numeros;
 	int opcion=0;
 	string numero;
 	//Tipo 0:Decimal, Tipo 1:Binario, Tipo 2:Hexadecimal, Tipo 3:Octal Tipo 4:Ninguno]
@@ -157,7 +158,20 @@ int main(){
 			
 				}
 			}
-		}
+			if(tipo==0){
+				Numero numero(numero);
+
+			}else if(tipo==1){
+				Binario binario(numero);
+			}else if(tipo==2){
+				Hexadecimal hexa(numero);
+			}else if(tipo==3){
+				Octal octal(numero); 
+			}else{
+				cout<<"El valor ingresado no es un numero";
+			}
+		}//fin if
+
 	}while(opcion!=5);
 	
 	return 0;
