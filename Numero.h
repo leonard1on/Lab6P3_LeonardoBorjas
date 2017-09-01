@@ -10,7 +10,7 @@ class Numero{
 		Numero();
 		Numero(string);
 		string getNumero();
-		void getNumero();
+		void setNumero(string);
 };
 #endif
 
