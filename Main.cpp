@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include
 
 int menu();
 
@@ -96,26 +97,67 @@ int main(){
 							break;
 					}
 				}
-			}
-			if(tipo==2){
-				stringstream str;
-				str << numero;
-				int value;
-				str >> hex >> value;
-				cout<<value;
+			}else if(numero[1]=='c' && numero[0]=='0'){
+				tipo=3;
+				for(int i=2;i<numero.length();i++){
+					switch(numero[i]){
+						case '1':{		
+							}
+							break;
+
+						case '2':{		
+							}
+							break;
+						
+						case '3':{		
+							}
+							break;
+	
+						case '4':{		
+							}
+							break;
+
+						case '5':{		
+							}
+							break;
+						
+						case '6':{		
+							}
+							break;
+
+						case '7':{		
+							}
+							break;
+
+						case '8':{
+							}
+							break;
+
+						case '9':{		
+							}
+							break;
+					
+						case '0':{
+							}
+							break;
+
+						default:{
+							tipo=4;
+						}
+				}
+			}else{	
+				//Binario
+				for(int i=0;i<numero.length();i++){
+					if(numero[i]!=1 || numero[i]!=2){
+						tipo=0;
+						i=numero.length();
+					}else{
+						tipo=1;
+					}
+			
+				}
 			}
 		}
-			/*//Binario
-			for(int i=0;i<numero.length();i++){
-				if(numero[i]!=1 || numero[i]!=2){
-					tipo=0;
-					i=numero.length();
-				}else{
-					tipo=1;
-				}
-			
-			}*/
-
 	}while(opcion!=5);
 	
 	return 0;
@@ -133,3 +175,12 @@ int menu(){
 	cout<<endl;
 	return opcion;
 }
+
+			/*if(tipo==2){
+				stringstream str;
+				str << numero;
+				int value;
+				str >> hex >> value;
+				cout<<value;
+			}*/
+
