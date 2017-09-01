@@ -3,9 +3,8 @@
 using namespace std;
 
 class Numero{
-	private:
-		string numero;
 	protected:
+		string numero;
 		int valor;
 	public:
 		Numero();
