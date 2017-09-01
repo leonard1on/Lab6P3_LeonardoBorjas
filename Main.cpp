@@ -12,9 +12,10 @@ int menu();
 using namespace std;
 int main(){
 	vector<Numero> numeros;
+
 	int opcion=0;
 	string numero;
-	//Tipo 0:Decimal, Tipo 1:Binario, Tipo 2:Hexadecimal, Tipo 3:Octal Tipo 4:Ninguno]
+	//Tipo 0:Decimal, Tipo 1:Binario, Tipo 2:Hexadecimal, Tipo 3:Octal, Tipo 4:Ninguno]
 	int tipo=0;
 	do{
 		opcion=menu();
@@ -145,11 +146,13 @@ int main(){
 						default:{
 							tipo=4;
 						}
+				
+					}
 				}
 			}else{	
 				//Binario
 				for(int i=0;i<numero.length();i++){
-					if(numero[i]!=1 || numero[i]!=2){
+					if(numero[i]!=1 || numero[i]!=0){
 						tipo=0;
 						i=numero.length();
 					}else{
@@ -159,19 +162,36 @@ int main(){
 				}
 			}
 			if(tipo==0){
-				Numero numero(numero);
-
+				Numero numer(numero);
+				numeros.push_back(numer);
+				cout<<"Numero";
 			}else if(tipo==1){
 				Binario binario(numero);
+				numeros.push_back(binario);
+				cout<<"Binario";
 			}else if(tipo==2){
 				Hexadecimal hexa(numero);
+				numeros.push_back(hexa);
+				cout<<"Hexa";
 			}else if(tipo==3){
-				Octal octal(numero); 
+				Octal octal(numero);
+				numeros.push_back(octal);
+				cout<<"Octal";
 			}else{
 				cout<<"El valor ingresado no es un numero";
 			}
+			cout<<endl;
 		}//fin if
-
+	
+		if(opcion==2 || opcion==3 || opcion==4){
+			int numero1, numero2;
+			for(int i=0;i<numeros.size();i++){
+				cout<<numeros.at(i).getNumero();
+			}
+			cout<<"Elija un numero de la lista: ";
+			cin>>numero1;
+			
+		}
 	}while(opcion!=5);
 	
 	return 0;

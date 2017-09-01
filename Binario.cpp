@@ -1,7 +1,4 @@
 #include "Binario.h"
-#include "Numero.h"
-#include <string>
-using namespace std;
 
 Binario::Binario(){
 	

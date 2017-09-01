@@ -1,5 +1,5 @@
-#ifndef Octal_H
-#define Octal_H
+#pragma once
+
 #include "Numero.h"
 #include <string>
 using namespace std;
@@ -9,4 +9,3 @@ class Octal : public Numero{
 		Octal();
 		Octal(string);
 };
-#endif

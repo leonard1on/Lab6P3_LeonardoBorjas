@@ -1,5 +1,4 @@
-#ifndef NUMERO_H
-#define NUMERO_H
+#pragma once
 #include <string>
 using namespace std;
 
@@ -12,5 +11,3 @@ class Numero{
 		string getNumero();
 		void setNumero(string);
 };
-#endif
-

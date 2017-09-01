@@ -1,7 +1,8 @@
-#ifndef BINARIO_H
-#define BINARIO_H
+#pragma once
+
 #include "Numero.h"
 #include <string>
+
 using namespace std;
 
 class Binario : public Numero{
@@ -9,4 +10,3 @@ class Binario : public Numero{
 		Binario();
 		Binario(string);
 };
-#endif
