@@ -7,7 +7,7 @@
 #include <sstream>
 #include <vector>
 #include <typeinfo>
-
+  
 int menu();
 int binario(int);
 using namespace std;
