@@ -18,3 +18,7 @@ string Numero::getNumero(){
 void Numero::setNumero(string pNumero){
 	numero=pNumero;
 }
+
+int Numero::getValor(){
+	return valor;
+}

@@ -194,17 +194,19 @@ int main(){
 			cin>>numero1;
 			cout<<"Elija el segundo numero de la lista: ";
 			cin>>numero2;
+
+			Numero num1=numeros.at(numero1);
+			Numero num2=numeros.at(numero2);
 			
 			if(opcion==2){
-				//valor=numeros.at(numero1).getNumero() + numeros.at(numero2).getNumero();
-				if(typeid(numeros.at(numero1))==typeid(Binario)) {
-					
-				}
+				valor=num1 + num2;
 			}else if(opcion==3){
-
+				valor=numeros.at(numero1) - numeros.at(numero2);
 			}else{
-
+				valor=numeros.at(numero1) * numeros.at(numero2);
 			}
+
+			cout<<"Decimal:"<<valor;
 			
 		}
 	}while(opcion!=5);
