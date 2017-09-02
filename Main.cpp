@@ -9,7 +9,7 @@
 #include <typeinfo>
 
 int menu();
-
+int binario(int);
 using namespace std;
 int main(){
 	vector<Numero> numeros;
@@ -206,7 +206,8 @@ int main(){
 				valor=numeros.at(numero1) * numeros.at(numero2);
 			}
 
-			cout<<"Decimal:"<<valor;
+			cout<<"Decimal:"<<valor<<endl;
+			cout<<"Binario:"<<binario(valor) <<endl;
 			
 		}
 	}while(opcion!=5);
@@ -214,6 +215,26 @@ int main(){
 	return 0;
 }
 
+int binario(int valor){
+	string cosa="";
+	string binary="";
+	int binario=0;
+	do{
+		if(valor%2 == 0){
+			cosa+="0";
+		}else{
+			cosa+="1";
+			valor--;
+		}
+		valor=valor/2;
+	}while(valor!=1);
+
+	for(int i=cosa.size()-1;i>0;i--){
+		binary+=cosa[i];
+	}
+	binario=stoi(binary);
+	return binario;
+}
 int menu(){
 	int opcion;
 	cout<<" - MENU - " <<endl
